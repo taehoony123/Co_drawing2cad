@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>벡터 PDF 자동 비교</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <main class="panel">
+    <div class="eyebrow">DRAWING CHANGE ANALYSIS</div>
+    <h1>벡터 PDF 자동 비교</h1>
+    <p class="note">
+      기존 PDF와 신규 PDF를 중첩하고 미세 이동을 제외한 중요 변경을 자동 추출합니다.
+      내부에 벡터 선이 포함된 PDF를 사용하세요.
+    </p>
+
+    <form id="compare-form">
+      <label for="old-file">기존 PDF</label>
+      <input id="old-file" name="old_file" type="file" accept="application/pdf,.pdf" required>
+
+      <label for="new-file">신규 PDF</label>
+      <input id="new-file" name="new_file" type="file" accept="application/pdf,.pdf" required>
+
+      <button id="submit-button" type="submit">비교 시작</button>
+    </form>
+
+    <div id="status" role="status" aria-live="polite"></div>
+
+    <section class="legend" aria-label="변경 유형 색상">
+      <span><i class="added"></i>추가</span>
+      <span><i class="deleted"></i>삭제</span>
+      <span><i class="moved"></i>이동</span>
+      <span><i class="modified"></i>형상 변경</span>
+    </section>
+  </main>
+  <script src="/assets/app.js" defer></script>
+</body>
+</html>

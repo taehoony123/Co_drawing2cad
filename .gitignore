@@ -1,0 +1,30 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.Python
+
+# Virtual environments and local configuration
+.pytest_cache/
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+
+# Build, test, and editor artifacts
+build/
+dist/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+.DS_Store
+Thumbs.db
+*.log
+
+# Generated comparison data (may contain uploaded drawings)
+comparison_runs/
+comparison_result/
+ErrorReports/
+acad.err
+

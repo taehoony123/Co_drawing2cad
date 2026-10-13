@@ -1,0 +1,26 @@
+[project]
+name = "drawing-compare"
+version = "0.1.0"
+description = "Automatic DWG/DXF vector comparison with local-motion suppression and optional multimodal LLM summaries"
+requires-python = ">=3.11"
+dependencies = [
+  "ezdxf>=1.4",
+  "numpy>=2.0",
+  "opencv-python>=4.10",
+  "fastapi>=0.115",
+  "uvicorn>=0.34",
+  "python-multipart>=0.0.20",
+  "PyMuPDF>=1.26",
+  "Pillow>=11.0",
+]
+
+[project.scripts]
+drawing-compare = "drawing_compare.cli:main"
+
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["drawing_compare*"]
+
